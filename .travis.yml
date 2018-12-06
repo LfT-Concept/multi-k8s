@@ -14,8 +14,3 @@ before_install:
   - docker build -t lftconcept/react-test -f ./client/Dockerfile.dev ./client
   script:
   - docker run lftconcept/react-test npm test -- --coverage
-  deploy:
-    provider: script
-    script: bash ./deploy.sh
-    on:
-      branch: master
