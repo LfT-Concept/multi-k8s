@@ -1,0 +1,39 @@
+In cluster - select the console for the cluster NOT the project
+
+Run 
+
+> gcloud container clusters get-credentials multi-k8s --zone europe-west1-b --project multi-k8s-223912
+
+Test with
+
+> kubectl get services
+
+This should give a result back
+
+> gcloud config set project mukti-k8s-223912
+> gcloud config set compute/zone europe-west1-b
+> gcloud container clusters get-credentials multi-k8s
+
+> kubectl create secret generic pgpassword --from-literal PGPASSWORD=blahblahblah
+
+> curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
+> chmod 700 get_helm.sh
+> ./get_helm.sh
+
+Dont run helm init yet!!!
+
+Checking command
+
+> kubectl get namespaces
+
+Shows default namespaces
+
+> kubectl create serviceaccount --namespace kube-system tiller
+> kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+
+> helm init --service-account tiller --upgrade
+
+> helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
+
+====> possibly gettig service account error
+====> need to create cluster at start of this - remember to name cluster multi-cluster NOT multi-k8s AND remember to change travis.yml
