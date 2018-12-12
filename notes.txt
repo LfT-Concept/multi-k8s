@@ -44,6 +44,8 @@ Shows default namespaces
 
 > helm install --name cert-manager --namespace kube-system --version v0.4.1 stable/cert-manager
 
+got to update domainmonster with new ips for new cluster
+
 issuer.yaml created
 certificate.yaml created
 
