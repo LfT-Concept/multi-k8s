@@ -1,14 +1,8 @@
-In cluster - select the console for the cluster NOT the project
+In Kubernetes on Google Cloud
 
-Run 
+> Clusters > Create Cluster > rename to multi-cluster, select europe-west1-b and click Create
 
-> gcloud container clusters get-credentials multi-cluster --zone europe-west1-b --project multi-k8s-223912
-
-Test with
-
-> kubectl get services
-
-This should give a result back
+Select the console for the project
 
 > gcloud config set project multi-k8s-223912
 > gcloud config set compute/zone europe-west1-b
@@ -35,16 +29,13 @@ Shows default namespaces
 
 > helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
 
-====> possibly gettig service account error
-====> need to create cluster at start of this - remember to name cluster multi-cluster NOT multi-k8s AND remember to change travis.yml
+now deploy master
 
-=> found error in yml - create PR
+got to update domainmonster with new ips for new cluster
 
 ======================================================= setting up https ===========================================
 
 > helm install --name cert-manager --namespace kube-system --version v0.4.1 stable/cert-manager
-
-got to update domainmonster with new ips for new cluster
 
 issuer.yaml created
 certificate.yaml created
