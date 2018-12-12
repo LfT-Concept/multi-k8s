@@ -53,5 +53,9 @@ build and deploy, then back to kubernetes console
 
 > kubectl describe certificates
 
+should see in events that the certificate was verified
 
+> kubectl get secrets
+
+should see secret for domain
 
