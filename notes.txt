@@ -42,7 +42,16 @@ Shows default namespaces
 
 ======================================================= setting up https ===========================================
 
-> helm install \
-    --name cert-manager \
-    --namespace kube-system \
-    stable/cert-manager
+> helm install --name cert-manager --namespace kube-system --version v0.4.1 stable/cert-manager
+
+issuer.yaml created
+certificate.yaml created
+
+build and deploy, then back to kubernetes console
+
+> kubectl get certificates
+
+> kubectl describe certificates
+
+
+

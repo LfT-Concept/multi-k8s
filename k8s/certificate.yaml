@@ -10,11 +10,9 @@ spec:
   commonName: calummoir.co.uk
   dnsNames:
     - calummoir.co.uk
-    - www.calummoir.co.uk
   acme:
     config:
       - http01:
           ingressClass: nginx
         domains:
           - calummoir.co.uk
-          - www.calummoir.co.uk
