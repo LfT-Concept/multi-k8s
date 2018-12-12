@@ -32,6 +32,7 @@ Shows default namespaces
 now deploy master
 
 got to update domainmonster with new ips for new cluster
+chcek that http for site works
 
 ======================================================= setting up https ===========================================
 
