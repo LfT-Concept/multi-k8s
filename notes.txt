@@ -2,7 +2,7 @@ In cluster - select the console for the cluster NOT the project
 
 Run 
 
-> gcloud container clusters get-credentials multi-k8s --zone europe-west1-b --project multi-k8s-223912
+> gcloud container clusters get-credentials multi-cluster --zone europe-west1-b --project multi-k8s-223912
 
 Test with
 
@@ -10,9 +10,9 @@ Test with
 
 This should give a result back
 
-> gcloud config set project mukti-k8s-223912
+> gcloud config set project multi-k8s-223912
 > gcloud config set compute/zone europe-west1-b
-> gcloud container clusters get-credentials multi-k8s
+> gcloud container clusters get-credentials multi-cluster
 
 > kubectl create secret generic pgpassword --from-literal PGPASSWORD=blahblahblah
 
