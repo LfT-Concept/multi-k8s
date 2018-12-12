@@ -1,6 +1,6 @@
 docker build -t lftconcept/multi-client:latest -t lftconcept/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t lftconcept/multi-server:latest -t lftconcept/multi-server:$SHA -f ./server/Dockerfile ./server
-dokcer build -t lftconcept/multi-worker:latest -t lftconcept/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t lftconcept/multi-worker:latest -t lftconcept/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push lftconcept/multi-client:latest
 docker push lftconcept/multi-server:latest
